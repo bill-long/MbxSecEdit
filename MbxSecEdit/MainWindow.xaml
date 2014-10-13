@@ -1,0 +1,11 @@
+﻿<Window x:Class="MbxSecEdit.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MbxSecEdit" Height="72" Width="481">
+    <Grid>
+        <Label Margin="0,0,426,0">DN:</Label>
+        <TextBox Name="DnTextBox" Margin="52,0,85,0"></TextBox>
+        <Button Click="Button_Click" Margin="393,0,0,0">Read</Button>
+
+    </Grid>
+</Window>

@@ -1,0 +1,25 @@
+﻿<Window x:Class="MbxSecEdit.AclWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AclWindow" Height="374" Width="641">
+    <Window.Resources>
+        <ContextMenu x:Key="RightClickMenu">
+            <MenuItem Header="Add" Click="AddAce_OnClick"></MenuItem>
+        </ContextMenu>
+    </Window.Resources>
+    <Grid>
+        <ScrollViewer>
+            <ListView Name="DaclListView" ContextMenu="{StaticResource RightClickMenu}" ItemsSource="{Binding DaclAces}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn DisplayMemberBinding="{Binding Trustee}" Header="SID" Width="200"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding AceType}" Header="Type" Width="50"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding AccessMask}" Header="Mask" Width="50"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding AceFlags}" Header="AceFlags" Width="60"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Flags}" Header="Flags" Width="60"></GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </ScrollViewer>
+    </Grid>
+</Window>
